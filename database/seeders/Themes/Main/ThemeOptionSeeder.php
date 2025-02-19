@@ -38,7 +38,7 @@ class ThemeOptionSeeder extends ThemeSeeder
             'breadcrumb_text_color' => '',
             'blog_author_style' => 'avatar_start',
             'blog_description_style' => 'normal',
-            'copyright' => '©%Y Archi Elite JSC. All Rights Reserved.',
+            'copyright' => '©%Y Madanika. All Rights Reserved.',
             'language_switcher_enabled' => true,
             'newsletter_popup_enable' => true,
             'newsletter_popup_image' => $this->filePath('general/newsletter-popup.png', 'main'),

@@ -1,12 +1,8 @@
 {!! Theme::partial('header-top') !!}
-<div class="echo-home-1-menu" style="background-color: #FFB200 !important;">
-    <div class="echo-site-main-logo-menu-social" style="background-color: #FFB200 !important;">
+<div class="echo-home-1-menu">
+    <div class="echo-site-main-logo-menu-social">
         <div class="container">
-            <div class="d-flex align-items-center justify-content-between"
-                style="overflow-x: auto; white-space: nowrap; max-width: 100%; 
-                scrollbar-width: thin; /* Untuk Firefox */
-                -ms-overflow-style: none; /* Untuk IE/Edge */
-                -webkit-overflow-scrolling: touch;">
+            <div class="d-flex align-items-center justify-content-between">
 
                 <div class="logo-header-sidebar" style="flex-shrink: 0;">
                     {!! Theme::partial('header.partials.logo') !!}
