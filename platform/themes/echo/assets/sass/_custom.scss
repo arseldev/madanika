@@ -1023,12 +1023,12 @@ body.home-one, .home-eight, .home-nine, .home-two {
         li.menu-item {
             &:hover {
                 a.echo-dropdown-main-element {
-                    color: white !important;
+                    color: (--primary-color) !important;
                 }
             }
             a {
                 &:hover {
-                    color: white !important;
+                    color: (--primary-color) !important;
                 }
             }
 

@@ -5,13 +5,9 @@
             'nav-item' => $row->parent,
             'echo-has-dropdown' => $row->has_child,
             'active' => $row->active,
-        ])>
-            <a
-                @class(['echo-dropdown-main-element' => ! $row->parent])
-                href="{{ url($row->url) }}"
-                title="{{ $row->title }}"
-                @if ($row->target !== '_self') target="{{ $row->target }}" @endif
-            >
+        ]) onmouseenter="this.style.color='blue'">
+            <a @class(['echo-dropdown-main-element' => !$row->parent]) href="{{ url($row->url) }}" title="{{ $row->title }}"
+                @if ($row->target !== '_self') target="{{ $row->target }}" @endif>
                 {{ $row->title }}
             </a>
             @if ($row->has_child)
