@@ -5,7 +5,10 @@
 
 @endphp
 
-<section @class(['echo-hero-section inner echo-feature-area', 'inner-2' => $postStyle == 'list'])>
+<section @class([
+    'echo-hero-section inner echo-feature-area',
+    'inner-2' => $postStyle == 'list',
+])>
     <div class="echo-hero">
         <div class="container">
             <div class="echo-full-hero-content inner-category-1">
@@ -17,13 +20,11 @@
                         @if ($posts->isNotEmpty())
                             {!! Theme::partial('blog.posts', compact('posts')) !!}
                         @else
-                            <h1 class="text-center">{{ __('Ops! No results found') }}</h1>
+                            <h1 class="text-center">{{ __('Ops! Tidak ada hasil ditemukan') }}</h1>
                             <p class="text-center">
-                                {{ __('We couldn’t find what you searched for. Try searching again or') }}
-                                <a
-                                    class="link-primary custom-link"
-                                    href="{{ route('public.single', 'blog') }}"
-                                >{{ __('Back here') }}</a>
+                                {{ __('Kami tidak dapat menemukan apa yang Anda cari. Coba cari lagi atau') }}
+                                <a class="link-primary custom-link"
+                                    href="{{ route('public.single', 'blog') }}">{{ __('Kembali disini') }}</a>
                             </p>
                         @endif
                     </div>
@@ -32,11 +33,11 @@
                         <div class="col-xl-4 col-lg-5 col-md-12 sticky-coloum-item">
                             <div class="echo-right-ct-1">
 
-                            {!! apply_filters('ads_render', null, 'primary_sidebar_before', ['class' => 'my-2 text-center']) !!}
+                                {!! apply_filters('ads_render', null, 'primary_sidebar_before', ['class' => 'my-2 text-center']) !!}
 
-                            {!! dynamic_sidebar('primary_sidebar') !!}
+                                {!! dynamic_sidebar('primary_sidebar') !!}
 
-                            {!! apply_filters('ads_render', null, 'primary_sidebar_after', ['class' => 'my-2 text-center']) !!}
+                                {!! apply_filters('ads_render', null, 'primary_sidebar_after', ['class' => 'my-2 text-center']) !!}
                             </div>
                         </div>
                     @endif

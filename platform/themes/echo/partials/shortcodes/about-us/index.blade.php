@@ -2,7 +2,7 @@
     <div class="container">
         <div class="echo-about-area-inner">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="content-area">
                         @if ($title = $shortcode->title)
                             <h3 class="title">{!! BaseHelper::clean($title) !!}</h3>

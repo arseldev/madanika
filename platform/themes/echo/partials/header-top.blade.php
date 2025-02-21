@@ -1,4 +1,4 @@
-<div class="echo-header-top">
+<div class="echo-header-top" style="background-color: #FFB200">
     <div class="container">
         <div class="echo-full-header-top">
             <div class="d-flex align-items-center justify-content-between plr_md--30">

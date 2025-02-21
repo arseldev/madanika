@@ -4,7 +4,6 @@ return [
     'common' => [
         'name' => 'Name',
         'email' => 'Email',
-        'website' => 'Website',
         'comment' => 'Comment',
     ],
 
@@ -37,9 +36,9 @@ return [
         ],
 
         'form' => [
-            'title' => 'Leave a comment',
+            'title' => 'Leave a comments',
             'description' => 'Your email address will not be published. Required fields are marked *',
-            'cookie_consent' => 'Save my name, email, and website in this browser for the next time I comment.',
+            'cookie_consent' => 'Save my name, and email in this browser for the next time I comment.',
             'submit' => 'Post Comment',
         ],
 
