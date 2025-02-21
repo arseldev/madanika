@@ -51,13 +51,13 @@ class ContactServiceProvider extends ServiceProvider
 
         DashboardMenu::default()->beforeRetrieving(function (): void {
             DashboardMenu::make()
-                ->registerItem(
-                    DashboardMenuItem::make()
-                        ->id('cms-plugins-contact')
-                        ->priority(120)
-                        ->name('plugins/contact::contact.menu')
-                        ->icon('ti ti-mail')
-                )
+                // ->registerItem(
+                //     DashboardMenuItem::make()
+                //         ->id('cms-plugins-contact')
+                //         ->priority(120)
+                //         ->name('plugins/contact::contact.menu')
+                //         ->icon('ti ti-mail')
+                // )
                 ->registerItem(
                     DashboardMenuItem::make()
                         ->id('cms-plugins-contact-list')
@@ -66,17 +66,17 @@ class ContactServiceProvider extends ServiceProvider
                         ->name('plugins/contact::contact.name')
                         ->icon('ti ti-cube')
                         ->route('contacts.index')
-                )
-                ->registerItem(
-                    DashboardMenuItem::make()
-                        ->id('cms-plugins-contact-custom-fields')
-                        ->parentId('cms-plugins-contact')
-                        ->priority(130)
-                        ->name('plugins/contact::contact.custom_field.name')
-                        ->icon('ti ti-cube-plus')
-                        ->route('contacts.custom-fields.index')
-                        ->permissions('contact.custom-fields')
                 );
+                // ->registerItem(
+                //     DashboardMenuItem::make()
+                //         ->id('cms-plugins-contact-custom-fields')
+                //         ->parentId('cms-plugins-contact')
+                //         ->priority(130)
+                //         ->name('plugins/contact::contact.custom_field.name')
+                //         ->icon('ti ti-cube-plus')
+                //         ->route('contacts.custom-fields.index')
+                //         ->permissions('contact.custom-fields')
+                // );
         });
 
         PanelSectionManager::default()->beforeRendering(function (): void {

@@ -76,61 +76,61 @@ class ThemeServiceProvider extends ServiceProvider
                         ->route('theme.options')
                         ->permissions('theme.options')
                 )
-                ->registerItem(
-                    DashboardMenuItem::make()
-                        ->id('cms-core-appearance-custom-css')
-                        ->priority(5)
-                        ->parentId('cms-core-appearance')
-                        ->name('packages/theme::theme.custom_css')
-                        ->icon('ti ti-file-type-css')
-                        ->route('theme.custom-css')
-                        ->permissions('theme.custom-css')
-                )
-                ->when(
-                    $config->get('packages.theme.general.enable_custom_js'),
-                    function (DashboardMenuSupport $menu): void {
-                        $menu->registerItem(
-                            DashboardMenuItem::make()
-                                ->id('cms-core-appearance-custom-js')
-                                ->priority(6)
-                                ->parentId('cms-core-appearance')
-                                ->name('packages/theme::theme.custom_js')
-                                ->icon('ti ti-file-type-js')
-                                ->route('theme.custom-js')
-                                ->permissions('theme.custom-js')
-                        );
-                    }
-                )
-                ->when(
-                    $config->get('packages.theme.general.enable_custom_html'),
-                    function (DashboardMenuSupport $menu): void {
-                        $menu->registerItem(
-                            DashboardMenuItem::make()
-                                ->id('cms-core-appearance-custom-html')
-                                ->priority(6)
-                                ->parentId('cms-core-appearance')
-                                ->name('packages/theme::theme.custom_html')
-                                ->icon('ti ti-file-type-html')
-                                ->route('theme.custom-html')
-                                ->permissions('theme.custom-html')
-                        );
-                    }
-                )
-                ->when(
-                    $config->get('packages.theme.general.enable_robots_txt_editor'),
-                    function (DashboardMenuSupport $menu): void {
-                        $menu->registerItem(
-                            DashboardMenuItem::make()
-                                ->id('cms-core-appearance-robots-txt')
-                                ->priority(6)
-                                ->parentId('cms-core-appearance')
-                                ->name('packages/theme::theme.robots_txt_editor')
-                                ->icon('ti ti-file-type-txt')
-                                ->route('theme.robots-txt')
-                                ->permissions('theme.robots-txt')
-                        );
-                    }
-                );
+                // ->registerItem(
+                //     DashboardMenuItem::make()
+                //         ->id('cms-core-appearance-custom-css')
+                //         ->priority(5)
+                //         ->parentId('cms-core-appearance')
+                //         ->name('packages/theme::theme.custom_css')
+                //         ->icon('ti ti-file-type-css')
+                //         ->route('theme.custom-css')
+                //         ->permissions('theme.custom-css')
+                // )
+                // ->when(
+                //     $config->get('packages.theme.general.enable_custom_js'),
+                //     function (DashboardMenuSupport $menu): void {
+                //         $menu->registerItem(
+                //             DashboardMenuItem::make()
+                //                 ->id('cms-core-appearance-custom-js')
+                //                 ->priority(6)
+                //                 ->parentId('cms-core-appearance')
+                //                 ->name('packages/theme::theme.custom_js')
+                //                 ->icon('ti ti-file-type-js')
+                //                 ->route('theme.custom-js')
+                //                 ->permissions('theme.custom-js')
+                //         );
+                //     }
+                // )
+                // ->when(
+                //     $config->get('packages.theme.general.enable_custom_html'),
+                //     function (DashboardMenuSupport $menu): void {
+                //         $menu->registerItem(
+                //             DashboardMenuItem::make()
+                //                 ->id('cms-core-appearance-custom-html')
+                //                 ->priority(6)
+                //                 ->parentId('cms-core-appearance')
+                //                 ->name('packages/theme::theme.custom_html')
+                //                 ->icon('ti ti-file-type-html')
+                //                 ->route('theme.custom-html')
+                //                 ->permissions('theme.custom-html')
+                //         );
+                //     }
+                // )
+                // ->when(
+                //     $config->get('packages.theme.general.enable_robots_txt_editor'),
+                //     function (DashboardMenuSupport $menu): void {
+                //         $menu->registerItem(
+                //             DashboardMenuItem::make()
+                //                 ->id('cms-core-appearance-robots-txt')
+                //                 ->priority(6)
+                //                 ->parentId('cms-core-appearance')
+                //                 ->name('packages/theme::theme.robots_txt_editor')
+                //                 ->icon('ti ti-file-type-txt')
+                //                 ->route('theme.robots-txt')
+                //                 ->permissions('theme.robots-txt')
+                //         );
+                //     }
+                // );
         });
 
         PanelSectionManager::default()->beforeRendering(function (): void {
