@@ -20,9 +20,9 @@
                 <div class="d-flex justify-content-between align-items-center">
                     {{-- @if (is_plugin_active('language') && theme_option('language_switcher_enabled', true))
                         {!! Theme::partial('language-switcher') !!}
-                    @endif
+                    @endif --}}
 
-                    {!! Theme::partial('account') !!} --}}
+                    {!! Theme::partial('account') !!}
 
                     {!! Theme::partial('header-sticky-button-toggle-sidebar') !!}
                 </div>
