@@ -51,13 +51,13 @@ class ContactServiceProvider extends ServiceProvider
 
         DashboardMenu::default()->beforeRetrieving(function (): void {
             DashboardMenu::make()
-                ->registerItem(
-                    DashboardMenuItem::make()
-                        ->id('cms-plugins-contact')
-                        ->priority(120)
-                        ->name('plugins/contact::contact.menu')
-                        ->icon('ti ti-mail')
-                )
+                // ->registerItem(
+                //     DashboardMenuItem::make()
+                //         ->id('cms-plugins-contact')
+                //         ->priority(120)
+                //         ->name('plugins/contact::contact.menu')
+                //         ->icon('ti ti-mail')
+                // )
                 ->registerItem(
                     DashboardMenuItem::make()
                         ->id('cms-plugins-contact-list')
