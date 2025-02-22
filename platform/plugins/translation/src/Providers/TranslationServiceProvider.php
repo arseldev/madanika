@@ -36,55 +36,55 @@ class TranslationServiceProvider extends ServiceProvider
         });
 
         PanelSectionManager::setGroupId('data-synchronize')->beforeRendering(function (): void {
-            PanelSectionManager::default()
-                ->registerItem(
-                    ExportPanelSection::class,
-                    fn () => PanelSectionItem::make('export-theme-translations')
-                        ->setTitle(trans('plugins/translation::translation.panel.theme-translations.title'))
-                        ->withDescription(trans(
-                            'plugins/translation::translation.export_description',
-                            ['name' => trans('plugins/translation::translation.panel.theme-translations.title')]
-                        ))
-                        ->withPriority(999)
-                        ->withPermission('theme-translations.export')
-                        ->withRoute('tools.data-synchronize.export.theme-translations.index')
-                )
-                ->registerItem(
-                    ExportPanelSection::class,
-                    fn () => PanelSectionItem::make('other-translations')
-                        ->setTitle(trans('plugins/translation::translation.panel.admin-translations.title'))
-                        ->withDescription(trans(
-                            'plugins/translation::translation.export_description',
-                            ['name' => trans('plugins/translation::translation.panel.admin-translations.title')]
-                        ))
-                        ->withPriority(999)
-                        ->withPermission('other-translations.export')
-                        ->withRoute('tools.data-synchronize.export.other-translations.index')
-                )
-                ->registerItem(
-                    ImportPanelSection::class,
-                    fn () => PanelSectionItem::make('import-theme-translations')
-                        ->setTitle(trans('plugins/translation::translation.panel.theme-translations.title'))
-                        ->withDescription(trans(
-                            'plugins/translation::translation.import_description',
-                            ['name' => trans('plugins/translation::translation.panel.theme-translations.title')]
-                        ))
-                        ->withPriority(999)
-                        ->withPermission('theme-translations.import')
-                        ->withRoute('tools.data-synchronize.import.theme-translations.index')
-                )
-                ->registerItem(
-                    ImportPanelSection::class,
-                    fn () => PanelSectionItem::make('other-translations')
-                        ->setTitle(trans('plugins/translation::translation.panel.admin-translations.title'))
-                        ->withDescription(trans(
-                            'plugins/translation::translation.import_description',
-                            ['name' => trans('plugins/translation::translation.panel.admin-translations.title')]
-                        ))
-                        ->withPriority(999)
-                        ->withPermission('other-translations.import')
-                        ->withRoute('tools.data-synchronize.import.other-translations.index')
-                );
+            PanelSectionManager::default();
+                // ->registerItem(
+                //     ExportPanelSection::class,
+                //     fn () => PanelSectionItem::make('export-theme-translations')
+                //         ->setTitle(trans('plugins/translation::translation.panel.theme-translations.title'))
+                //         ->withDescription(trans(
+                //             'plugins/translation::translation.export_description',
+                //             ['name' => trans('plugins/translation::translation.panel.theme-translations.title')]
+                //         ))
+                //         ->withPriority(999)
+                //         ->withPermission('theme-translations.export')
+                //         ->withRoute('tools.data-synchronize.export.theme-translations.index')
+                // )
+                // ->registerItem(
+                //     ExportPanelSection::class,
+                //     fn () => PanelSectionItem::make('other-translations')
+                //         ->setTitle(trans('plugins/translation::translation.panel.admin-translations.title'))
+                //         ->withDescription(trans(
+                //             'plugins/translation::translation.export_description',
+                //             ['name' => trans('plugins/translation::translation.panel.admin-translations.title')]
+                //         ))
+                //         ->withPriority(999)
+                //         ->withPermission('other-translations.export')
+                //         ->withRoute('tools.data-synchronize.export.other-translations.index')
+                // )
+                // ->registerItem(
+                //     ImportPanelSection::class,
+                //     fn () => PanelSectionItem::make('import-theme-translations')
+                //         ->setTitle(trans('plugins/translation::translation.panel.theme-translations.title'))
+                //         ->withDescription(trans(
+                //             'plugins/translation::translation.import_description',
+                //             ['name' => trans('plugins/translation::translation.panel.theme-translations.title')]
+                //         ))
+                //         ->withPriority(999)
+                //         ->withPermission('theme-translations.import')
+                //         ->withRoute('tools.data-synchronize.import.theme-translations.index')
+                //         );
+                // ->registerItem(
+                //     ImportPanelSection::class,
+                //     fn () => PanelSectionItem::make('other-translations')
+                //         ->setTitle(trans('plugins/translation::translation.panel.admin-translations.title'))
+                //         ->withDescription(trans(
+                //             'plugins/translation::translation.import_description',
+                //             ['name' => trans('plugins/translation::translation.panel.admin-translations.title')]
+                //         ))
+                //         ->withPriority(999)
+                //         ->withPermission('other-translations.import')
+                //         ->withRoute('tools.data-synchronize.import.other-translations.index')
+                // );
         });
 
         if ($this->app->runningInConsole()) {
